@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome - PocketPilot AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top, #1e1b4b, #0f172a);
+            font-family: Arial;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid #00e5ff;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 0 20px #00e5ff;
+            backdrop-filter: blur(10px);
+            width: 350px;
+        }
+
+        h1 {
+            color: #00e5ff;
+            text-shadow: 0 0 10px #00e5ff;
+        }
+
+        .btn {
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .parent {
+            background: #00e5ff;
+            color: black;
+            box-shadow: 0 0 15px #00e5ff;
+        }
+
+        .child {
+            background: #a855f7;
+            color: white;
+            box-shadow: 0 0 15px #a855f7;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .sub {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>💰 PocketPilot AI</h1>
+
+    <div class="sub">Select Your Role</div>
+
+    <a href="/parent-login" class="btn parent">👨 Parent</a>
+
+    <a href="/child-login" class="btn child">🧒 Child</a>
+
+</div>
+
+</body>
+</html>
