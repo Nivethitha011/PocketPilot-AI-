@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading PocketPilot AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(270deg, #0f172a, #1e1b4b, #0f172a);
+            background-size: 600% 600%;
+            animation: bgMove 8s ease infinite;
+            color: white;
+            font-family: Arial;
+            overflow: hidden;
+        }
+
+        @keyframes bgMove {
+            0% {background-position:0% 50%}
+            50% {background-position:100% 50%}
+            100% {background-position:0% 50%}
+        }
+
+        .loader {
+            text-align: center;
+        }
+
+        .coin {
+            font-size: 80px;
+            animation: flip 1s infinite;
+            filter: drop-shadow(0 0 15px #00e5ff);
+        }
+
+        @keyframes flip {
+            0% { transform: rotateY(0deg) translateY(0px); }
+            50% { transform: rotateY(180deg) translateY(-20px); }
+            100% { transform: rotateY(360deg) translateY(0px); }
+        }
+
+        .title {
+            font-size: 28px;
+            margin-top: 20px;
+            text-shadow: 0 0 10px #00e5ff;
+        }
+
+        .text {
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        .dots::after {
+            content: '';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0% { content: '' }
+            33% { content: '.' }
+            66% { content: '..' }
+            100% { content: '...' }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="loader">
+    <div class="coin">🪙</div>
+
+    <div class="title">PocketPilot AI</div>
+
+    <div class="text">
+        Loading Pocket Money Manager<span class="dots"></span>
+    </div>
+</div>
+
+<script>
+    setTimeout(() => {
+        window.location.href = "/welcome";
+    }, 3000);
+</script>
+
+</body>
+</html>

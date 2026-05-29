@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Child Dashboard - PocketPilot AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: radial-gradient(circle at top, #0f172a, #1a1a2e);
+            color: white;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-bottom: 1px solid #a855f7;
+            box-shadow: 0 0 10px #a855f7;
+        }
+
+        .title {
+            color: #a855f7;
+            font-size: 20px;
+            text-shadow: 0 0 10px #a855f7;
+        }
+
+        .logout a {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid #39ff14;
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0 0 20px #39ff14;
+        }
+
+        .money {
+            font-size: 40px;
+            color: #39ff14;
+            text-shadow: 0 0 15px #39ff14;
+        }
+
+        .small {
+            opacity: 0.8;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background: #00e5ff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 15px #00e5ff;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .spend-box {
+            margin-top: 20px;
+            display: none;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid #39ff14;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="title">🧒 Child Dashboard</div>
+    <div class="logout"><a href="/logout">Logout 🚪</a></div>
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>💰 Pocket Money</h2>
+
+        <div class="money">₹ {{ data.allowance }}</div>
+
+        <p class="small">Remaining Balance</p>
+
+        <h3>📉 ₹ {{ data.remaining }}</h3>
+
+        <button class="btn" onclick="toggleSpend()">💳 Spend Money</button>
+
+        <div class="spend-box" id="spendBox">
+
+            <input type="number" placeholder="Enter Amount">
+
+            <input type="text" placeholder="Category">
+
+            <button class="btn">Submit Spend</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function toggleSpend() {
+    var box = document.getElementById("spendBox");
+    if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

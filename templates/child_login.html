@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Child Login - PocketPilot AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top, #1a1a2e, #0f172a);
+            font-family: Arial;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid #a855f7;
+            padding: 40px;
+            border-radius: 20px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 0 25px #a855f7;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: #a855f7;
+            text-shadow: 0 0 10px #a855f7;
+        }
+
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 10px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid #a855f7;
+        }
+
+        input:focus {
+            box-shadow: 0 0 10px #a855f7;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #39ff14;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 15px #39ff14;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .error {
+            color: #ff4d4d;
+            margin-top: 10px;
+            text-shadow: 0 0 10px red;
+        }
+
+        .back {
+            margin-top: 15px;
+            display: block;
+            color: #00e5ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="emoji">🧒💰</div>
+
+    <h2>Child Login</h2>
+
+    <form method="POST">
+
+        <input type="text" name="username" placeholder="Username" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Start Spending 🚀</button>
+
+    </form>
+
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <a href="/welcome" class="back">⬅ Back</a>
+
+</div>
+
+</body>
+</html>
