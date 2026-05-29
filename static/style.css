@@ -1,0 +1,173 @@
+/* =========================
+   POCKETPILOT AI - NEON THEME
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* -------------------------
+   GLOBAL BACKGROUND EFFECT
+-------------------------- */
+body {
+    background: radial-gradient(circle at top, #0f172a, #1e1b4b, #0f172a);
+    color: white;
+}
+
+/* -------------------------
+   NEON TEXT EFFECT
+-------------------------- */
+.neon-text {
+    color: #00e5ff;
+    text-shadow:
+        0 0 5px #00e5ff,
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff;
+}
+
+/* -------------------------
+   GLASS CARD STYLE
+-------------------------- */
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,229,255,0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px rgba(0,229,255,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 0 20px #00e5ff,
+        0 0 40px rgba(0,229,255,0.6);
+}
+
+/* -------------------------
+   BUTTON STYLE (NEON)
+-------------------------- */
+button, .btn {
+    background: linear-gradient(90deg, #00e5ff, #a855f7);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #a855f7;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px #00e5ff,
+        0 0 30px #a855f7;
+}
+
+/* -------------------------
+   INPUT FIELDS
+-------------------------- */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #00e5ff;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #00e5ff;
+    border-color: #a855f7;
+}
+
+/* -------------------------
+   TOP BAR
+-------------------------- */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid #00e5ff;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+/* -------------------------
+   TITLES
+-------------------------- */
+h1, h2, h3 {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+/* -------------------------
+   TABLE STYLE
+-------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    color: #a855f7;
+}
+
+/* -------------------------
+   BADGES
+-------------------------- */
+.badge {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 12px;
+    border: 1px solid #39ff14;
+    box-shadow: 0 0 10px #39ff14;
+    background: rgba(255,255,255,0.05);
+}
+
+/* -------------------------
+   LOADING ANIMATION HELP
+-------------------------- */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #00e5ff; }
+    50% { box-shadow: 0 0 20px #00e5ff; }
+    100% { box-shadow: 0 0 5px #00e5ff; }
+}
+
+.glow {
+    animation: glow 1.5s infinite;
+}
+
+/* -------------------------
+   MOBILE RESPONSIVE
+-------------------------- */
+@media screen and (max-width: 600px) {
+
+    .card {
+        width: 90%;
+        margin: auto;
+    }
+
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
