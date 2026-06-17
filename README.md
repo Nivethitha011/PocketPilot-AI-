@@ -54,6 +54,7 @@ To create a fun, modern, and beginner-friendly financial management app that tea
 ---
 
 Made with ❤️ using Flask & Neon UI
+
 <img width="600" height="439" alt="image" src="https://github.com/user-attachments/assets/705ce451-c3d7-4de1-b4c2-089320de1d83" />
 <img width="492" height="451" alt="image" src="https://github.com/user-attachments/assets/a24189c0-f954-4a3a-89cd-576b853c9265" />
 <img width="1365" height="645" alt="image" src="https://github.com/user-attachments/assets/a04b5aa6-384a-41de-8bb8-e501334f5fe4" />
